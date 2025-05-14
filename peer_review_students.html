@@ -196,7 +196,7 @@
 
       <table>
         <thead>
-          <tr><th>Description</th><th>4</th><th>3</th><th>2</th><th>1</th></tr>
+          <tr><th>Description</th><th>4 (Excellent)</th><th>3 (Good)</th><th>2 (Average)</th><th>1 (Poor)</th></tr>
         </thead>
         <tbody>
           <!-- Original Criteria -->
@@ -244,9 +244,28 @@
       <label>Date: <input type="date" name="date" required /></label>
 
       <button type="submit" class="submit-btn">Submit Review</button>
+     <button type="button" onclick="downloadForm()" class="submit-btn" style="margin-top: 10px; background: #27ae60;">Download Review</button>
     </form>
   </div>
 </div>
+
+  <script>
+  function downloadForm() {
+    const form = document.querySelector('form');
+    const formData = new FormData(form);
+    let content = "Peer Review Submission\n\n";
+    for (const [key, value] of formData.entries()) {
+      content += `${key}: ${value}\n`;
+    }
+
+    const blob = new Blob([content], { type: 'text/plain' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'peer_review.txt';
+    a.click();
+  }
+</script>
+
 
 </body>
 </html>
