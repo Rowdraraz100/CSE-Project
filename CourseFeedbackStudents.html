@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            min-height: 100vh;
+            padding-top: 70px;
+        }
+        .top-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: rgb(0, 32, 84);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .top-header img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .sidebar {
+            width: 220px;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+        }
+        .sidebar img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 250px;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2980b9;
+            color: white;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .p_1{
+            font-weight: normal;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        .rating-header {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+        button {
+            background-color: #08c4e5;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header class="top-header">
+        <img src="bauet-logo2.png" alt="BAUET Logo">
+        <h1>Bangladesh Army University of Engineering & Technology</h1>
+    </header>
+    <div class="sidebar">
+        <img src="bauet_logo.png" alt="BAUET Logo">
+    </div>
+    <div class="main-content">
+        <div class="top-bar">
+            <h2>Course Feedback Form</h2>
+        </div>
+        <div class="container">
+            <h2>Course Feedback (By Students)</h2>
+            <table>
+                <tr>
+                    <td><strong>Student Name</strong></td>
+                    <td><input type="text" name="studentname" style="width: 300px;"></td>
+                </tr>
+                <tr>
+                
+                    <td><strong>Student ID</strong></td>
+                    <td><input type="text" name="studentID" style="width: 300px;"></td>
+                </tr>
+                <tr>
+                    <td><strong>Session</strong></td>
+                    <td><input type="text" name="session" style="width: 300px;"></td>
+                </tr>
+                <tr>
+                    <td><strong>Batch</strong></td>
+                    <td><input type="text" name="batch" style="width: 300px;"></td>
+                </tr>
+                <tr>
+                    <td><strong>Course Code & Title</strong></td>
+                    <td><input type="text" name="course" style="width: 300px;"></td>
+                </tr>
+    
+            </table>
+
+            
+        <table>
+            <tr>
+                <th rowspan="2" style="width: 60%;">
+                    <p class="p_1">Please rate the following dimensions of quality of graduates according to importance in recruitment using the following rating scale:</p>
+                    <strong>4=Excellent, 3= Good, 2=Average, and 1=Poor</strong> <br>
+                    <strong>Description</strong>
+                </th>
+                <th colspan="4">Rating Scale</th>
+            </tr>
+            <tr>
+                <th class="rating-header">Excellent (4)</th>
+                <th class="rating-header">Good (3)</th>
+                <th class="rating-header">Average (2)</th>
+                <th class="rating-header">Poor (1)</th>
+            </tr>
+            <tr>
+                <td><strong>Course Objectives:</strong> Clarity and relevance of course objectives.</td>
+                <td><input type="radio" name="objectives" value="4"></td>
+                <td><input type="radio" name="objectives" value="3"></td>
+                <td><input type="radio" name="objectives" value="2"></td>
+                <td><input type="radio" name="objectives" value="1"></td>
+            </tr>
+            <tr>
+                <td><strong>Course Content:</strong> Quality and relevance of the course content.</td>
+                <td><input type="radio" name="content" value="4"></td>
+                <td><input type="radio" name="content" value="3"></td>
+                <td><input type="radio" name="content" value="2"></td>
+                <td><input type="radio" name="content" value="1"></td>
+            </tr>
+
+            <tr>
+                <td><strong>Teaching Methods:</strong> Effectiveness of teaching methods used.</td>
+                <td><input type="radio" name="methods" value="4"></td>
+                <td><input type="radio" name="methods" value="3"></td>
+                <td><input type="radio" name="methods" value="2"></td>
+                <td><input type="radio" name="methods" value="1"></td>
+            </tr>
+
+            <tr>
+                <td><strong>Assessment Methods:</strong> Fairness and variety of assessment methods (exams, quizzes, projects).</td>
+                <td><input type="radio" name="amethods" value="4"></td>
+                <td><input type="radio" name="amethods" value="3"></td>
+                <td><input type="radio" name="amethods" value="2"></td>
+                <td><input type="radio" name="amethods" value="1"></td>
+            </tr>
+
+            <tr>
+                <td><strong>Instructor’s Knowledge:</strong> Instructor’s depth of knowledge in the subject.</td>
+                <td><input type="radio" name="ikmethods" value="4"></td>
+                <td><input type="radio" name="ikmethods" value="3"></td>
+                <td><input type="radio" name="ikmethods" value="2"></td>
+                <td><input type="radio" name="ikmethods" value="1"></td>
+            </tr>
+
+            <tr>
+                <td><strong>Instructor’s Communication:</strong> Clarity and effectiveness in communication.</td>
+                <td><input type="radio" name="icmethods" value="4"></td>
+                <td><input type="radio" name="icmethods" value="3"></td>
+                <td><input type="radio" name="icmethods" value="2"></td>
+                <td><input type="radio" name="icmethods" value="1"></td>
+            </tr>
+
+            <tr>
+                <td><strong>Learning Resources:</strong> Availability and usefulness of learning resources (books, online materials).</td>
+                <td><input type="radio" name="lrmethods" value="4"></td>
+                <td><input type="radio" name="lrmethods" value="3"></td>
+                <td><input type="radio" name="lrmethods" value="2"></td>
+                <td><input type="radio" name="lrmethods" value="1"></td>
+            </tr> 
+
+            <tr>
+                <td><strong>Student Engagement:</strong> Level of student engagement and interaction during the course.</td>
+                <td><input type="radio" name="smethods" value="4"></td>
+                <td><input type="radio" name="smethods" value="3"></td>
+                <td><input type="radio" name="smethods" value="2"></td>
+                <td><input type="radio" name="smethods" value="1"></td>
+            </tr>
+
+            <tr>
+                <td><strong>Feedback and Support: </strong>Timeliness and usefulness of feedback and support provided.</td>
+                <td><input type="radio" name="fmethods" value="4"></td>
+                <td><input type="radio" name="fmethods" value="3"></td>
+                <td><input type="radio" name="fmethods" value="2"></td>
+                <td><input type="radio" name="fmethods" value="1"></td>
+            </tr>
+
+            <tr>
+                <td><strong>Overall Satisfaction:</strong>Overall satisfaction with the course.</td>
+                <td><input type="radio" name="omethods" value="4"></td>
+                <td><input type="radio" name="omethods" value="3"></td>
+                <td><input type="radio" name="omethods" value="2"></td>
+                <td><input type="radio" name="omethods" value="1"></td>
+            </tr>
+         </table>
+         <h3>Additional Comments</h3>
+         <textarea name="comments"></textarea>
+         <p><b>Signature & Date</b></p>
+         <input type="text" name="signature">
+         <input type="date" name="date">
+         <button type="submit">Submit Feedback</button>
+         <button type="button" onclick="downloadFeedback()">Download Feedback</button>
+
+ 
+        </div>
+    </div>
+
+  <script>
+    function downloadFeedback() {
+        const fields = [
+            { label: "Student Name", value: document.querySelector('input[name="studentname"]').value },
+            { label: "Student ID", value: document.querySelector('input[name="studentID"]').value },
+            { label: "Session", value: document.querySelector('input[name="session"]').value },
+            { label: "Batch", value: document.querySelector('input[name="batch"]').value },
+            { label: "Course Code & Title", value: document.querySelector('input[name="course"]').value },
+        ];
+
+        const questions = [
+            { label: "Course Objectives", name: "objectives" },
+            { label: "Course Content", name: "content" },
+            { label: "Teaching Methods", name: "methods" },
+            { label: "Assessment Methods", name: "amethods" },
+            { label: "Instructor’s Knowledge", name: "ikmethods" },
+            { label: "Instructor’s Communication", name: "icmethods" },
+            { label: "Learning Resources", name: "lrmethods" },
+            { label: "Student Engagement", name: "smethods" },
+            { label: "Feedback and Support", name: "fmethods" },
+            { label: "Overall Satisfaction", name: "omethods" }
+        ];
+
+        let text = "Course Feedback Summary\n\n";
+
+        fields.forEach(f => {
+            text += `${f.label}: ${f.value}\n`;
+        });
+
+        text += "\nRatings:\n";
+        questions.forEach(q => {
+            const rating = document.querySelector(`input[name="${q.name}"]:checked`);
+            text += `${q.label}: ${rating ? rating.value : "Not rated"}\n`;
+        });
+
+        const comments = document.querySelector('textarea[name="comments"]').value;
+        const signature = document.querySelector('input[name="signature"]').value;
+        const date = document.querySelector('input[name="date"]').value;
+
+        text += `\nAdditional Comments:\n${comments}\n\n`;
+        text += `Signature: ${signature}\nDate: ${date}\n`;
+
+        const blob = new Blob([text], { type: "text/plain" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "CourseFeedbackStudents.txt";
+        link.click();
+    }
+</script>
+
+    
+</body>
+</html>
